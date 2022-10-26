@@ -29,7 +29,12 @@ export default function Login() {
           text: "Login Success",
           icon: "success",
         });
-        return navigate("/");
+        const level = localStorage.getItem("level");
+        if (level === "2") {
+          navigate("/admin/airlines");
+        } else {
+          navigate("/");
+        }
       }
     });
     setIsLoading(false);

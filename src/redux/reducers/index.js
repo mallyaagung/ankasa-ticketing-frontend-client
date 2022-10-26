@@ -6,7 +6,10 @@ import listProductReducer from "./listProduct";
 import detailProductReducer from "./detailProduct";
 import listAirlineReducer from "./listAirline";
 import listMyBookingReducer from "./transaction";
-import detailMyBookingReducer from "./detailBooking"
+import detailMyBookingReducer from "./detailBooking";
+import createAirlinesReducer from "./createAirline";
+import detailAirlineReducer from "./detailAirline";
+import editAirlinesReducer from "./editAirline";
 
 const rootReducers = combineReducers({
   detailUser: detailUserReducer,
@@ -17,6 +20,9 @@ const rootReducers = combineReducers({
   listAirline: listAirlineReducer,
   myBooking: listMyBookingReducer,
   detailBooking: detailMyBookingReducer,
+  createAirline: createAirlinesReducer,
+  detailAirline: detailAirlineReducer,
+  editAirline: editAirlinesReducer,
 });
 
 export default rootReducers;

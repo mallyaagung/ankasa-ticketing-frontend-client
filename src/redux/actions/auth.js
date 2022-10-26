@@ -8,7 +8,9 @@ export const login = async (data, setErrors) => {
     );
 
     localStorage.setItem("token", res.data.token.jwt);
+    localStorage.setItem("level", res.data.token.level);
     localStorage.setItem("id", res.data.token.id);
+
     return true;
   } catch (error) {
     if (error.response) {
@@ -71,7 +73,7 @@ export const reset = async (token, data, setErrors) => {
   try {
     await axios.put(
       `${process.env.REACT_APP_API_URL}/auth/reset/${token}`,
-      data,
+      data
       // { withCredentials: true }
     );
     return true;
